@@ -9,7 +9,7 @@ class Shape {
     this.green = green
     this.blue = blue
   }
-  create() {
+  createShape() {
     const element = document.createElement('div')
     element.style.height = this.width + 'px'
     element.style.width = this.height + 'px'
@@ -26,16 +26,16 @@ function getRandomNumber(min, max) {
 }
 
 setInterval(() => {
-  let random = getRandomNumber(25, 100)
+  let randomNumber = getRandomNumber(25, 100)
   let singleElement = new Shape(
-    random,
-    random,
-    getRandomNumber(0, window.innerWidth - random),
-    getRandomNumber(0, window.innerHeight - random),
+    randomNumber,
+    randomNumber,
+    getRandomNumber(0, window.innerWidth - randomNumber),
+    getRandomNumber(0, window.innerHeight - randomNumber),
     getRandomNumber(15, 50),
     getRandomNumber(100, 255),
     getRandomNumber(100, 255),
     getRandomNumber(100, 255)
   )
-  singleElement.create()
+  singleElement.createShape()
 }, 200)
